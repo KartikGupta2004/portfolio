@@ -19,11 +19,18 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
 } from "../assets";
+
+import actify from '../assets/actify.png'
+import medvault from '../assets/medvault.png'
+import toDo from '../assets/toDo.png'
+
+import cloudinary from '../assets/tech/cloudinary.png'
+import express from '../assets/tech/express.png'
+import nhost from '../assets/tech/nhost.png'
+import postman from '../assets/tech/postman.png'
+import vsCode from '../assets/tech/vsCode.png'
 
 export const navLinks = [
   {
@@ -42,20 +49,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Full-Stack Developer",
     icon: web,
-  },
-  {
-    title: "React Native Developer",
-    icon: mobile,
+    description: "Expert in React, Node.js, and Express.js for scalable web applications.",
   },
   {
     title: "Backend Developer",
     icon: backend,
+    description: "Skilled in building robust APIs and managing databases with MongoDB.",
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "Database Management",
+    icon: mobile,
+    description: "Efficient in MongoDB databases for optimized data storage.",
   },
 ];
 
@@ -73,17 +79,10 @@ const technologies = [
     icon: javascript,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
     name: "React JS",
     icon: reactjs,
   },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
+
   {
     name: "Tailwind CSS",
     icon: tailwind,
@@ -96,22 +95,59 @@ const technologies = [
     name: "MongoDB",
     icon: mongodb,
   },
+  // {
+  //   name: "SQL",
+  //   icon: "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png",
+  // },
+  // {
+  //   name: "git",
+  //   icon: git,
+  // },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "GitHub",
+    icon: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
   },
   {
-    name: "git",
-    icon: git,
+    name: "Express JS",
+    icon: express,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "Nhost",
+    icon: nhost,
   },
   {
-    name: "docker",
-    icon: docker,
+    name: "Cloudinary",
+    icon: cloudinary,
   },
+  {
+    name: "VS Code",
+    icon: vsCode,
+  },
+  {
+    name: "Postman",
+    icon: postman,
+  },
+  // {
+  //   name: "TypeScript",
+  //   icon: typescript,
+  // },
+
+  // {
+  //   name: "Redux Toolkit",
+  //   icon: redux,
+  // },
+  // {
+  //   name: "Three JS",
+  //   icon: threejs,
+  // },
+  // {
+  //   name: "figma",
+  //   icon: figma,
+  // },
+  // {
+  //   name: "docker",
+  //   icon: docker,
+  // },
 ];
 
 const experiences = [
@@ -198,67 +234,99 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Actify - Connecting Volunteers with Service Opportunities",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Actify is a dynamic platform designed to connect volunteers with organizations offering service opportunities. It addresses the fragmentation, inefficiency, and lack of personalization in current volunteer matching systems, providing a centralized and streamlined solution.",
     tags: [
       {
-        name: "react",
+        name: "ReactJs",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "NodeJs",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "ExpressJs",
         color: "pink-text-gradient",
       },
+      {
+        name: "MongoDB",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "purple-text-gradient",
+      },
+      {
+        name: "TensorFlow",
+        color: "red-text-gradient",
+      },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: actify,
+    source_code_link: "https://github.com/KartikGupta2004/Actify",
   },
   {
-    name: "Job IT",
+    name: "MedVault - Secure Storage for Medical Documents",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "MedVault is a easy to use web-based application which serves the purpose of keeping medical documents safe, secure in one-place and easily accessible when needed. Provides multiple features as latest news, nearby pharmacy finder and medical chatbot.",
     tags: [
       {
-        name: "react",
+        name: "ReactJs",
         color: "blue-text-gradient",
+      },
+      {
+        name: "NodeJs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "ExpressJs",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "purple-text-gradient",
       },
       {
         name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
+        color: "red-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: medvault,
+    source_code_link: "https://github.com/KartikGupta2004/Inheritance-Proj-Patient-Database",
   },
   {
-    name: "Trip Guide",
+    name: "ToDo - Organise your Work & Life",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "ToDo is an easy to use web application for people who want their goal to be accomplished.",
     tags: [
       {
-        name: "nextjs",
+        name: "ReactJs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "NodeJs",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "ExpressJs",
         color: "pink-text-gradient",
       },
+      {
+        name: "MongoDB",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "TailwindCSS",
+        color: "purple-text-gradient",
+      },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: toDo,
+    source_code_link: "https://github.com/KartikGupta2004/ToDo-List",
   },
 ];
 

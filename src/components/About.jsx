@@ -7,7 +7,7 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ServiceCard = ({ index, title, icon }) => (
+const ServiceCard = ({ index, title, icon, description }) => (
   <Tilt className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
@@ -30,6 +30,10 @@ const ServiceCard = ({ index, title, icon }) => (
         <h3 className='text-white text-[20px] font-bold text-center'>
           {title}
         </h3>
+        <p className='text-gray-500 text-[10px] font-bold text-center'>
+          {description}
+        </p>
+
       </div>
     </motion.div>
   </Tilt>
@@ -47,14 +51,11 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        I'm a skilled full-stack developer with experience in JavaScript, and hands-on experience in frameworks like React, Node.js, and Express.js. I have a strong grasp of database management with MongoDB. Passionate about building scalable, efficient, and user-friendly solutions, I thrive in collaborative environments and love solving real-world problems through technology. <br className='sm:block hidden' />
+        Let’s work together to bring your ideas to life!
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20 flex flex-wrap gap-32'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

@@ -44,22 +44,26 @@ const Navbar = () => {
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Adrian &nbsp;
-            <span className='sm:block hidden'> | JavaScript Mastery</span>
+            Kartik &nbsp;
+            <span className='sm:block hidden'> | Full Stack Web Developer</span>
           </p>
         </Link>
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((nav) => (
             <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
+            key={nav.id}
+            className={`${
+              active === nav.title ? "text-white" : "text-secondary"
+            } hover:text-white text-[18px] font-medium cursor-pointer`}
+            onClick={() => {
+              setActive(nav.title);
+              document.getElementById(nav.id)?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            <a href={`#${nav.id}`}>{nav.title}</a>
+          </li>
+          
           ))}
         </ul>
 
@@ -79,17 +83,18 @@ const Navbar = () => {
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
                 <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
-                >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
-                </li>
+                key={nav.id}
+                className={`${
+                  active === nav.title ? "text-white" : "text-secondary"
+                } hover:text-white text-[18px] font-medium cursor-pointer`}
+                onClick={() => {
+                  setActive(nav.title);
+                  document.getElementById(nav.id)?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+              
               ))}
             </ul>
           </div>
